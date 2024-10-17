@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+		
+		#square2{
+			width:300px;
+			height:300px;
+			background-color:mediumpurple;
+			position:absolute;
+
+			animation-name:john;
+			animation-duration:2s;
+			animation-iteration-count:infinite;
+		}
+
+		@keyframes john{
+			0%{
+				left:500px;
+				top:0px;
+			}
+			50%{
+				left:50px;
+				background-color:purple;
+				transform:rotate(720deg);
+				width:200px;
+				height:200px;
+				top:330px;
+			}
+			100%{
+				left:50%;
+				border-radius:0%;
+				width:100px;
+				height:100px;
+				top:500px;
+			}
+			
+		}
+
+		#square1{
+			width:100px;
+			height:100px;
+			background-color:paleturquoise;
+			position:absolute;
+
+			animation-name:katie;
+			animation-duration:2s;
+			animation-iteration-count:infinite;
+		}
+
+		@keyframes katie{
+			0%{
+				left:0px;
+				top:0px;
+			}
+			
+			50%{
+				left:800px;
+				background-color:turquoise;
+				border-radius:50%;
+				top:300px;
+			}
+			100%{
+				left:50%;
+				background-color:darkturquoise;
+				border-radius:0%;
+				top:500px;
+			}
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+
+	<div id="square1"></div>
+	<div id="square2"></div>
+
+</body>
+</html>
