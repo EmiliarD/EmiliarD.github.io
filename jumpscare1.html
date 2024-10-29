@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	body{
+	background-size:cover;
+}
+	@font-face{
+		font-family:"halloween";
+		src:url(halloweeny.ttf);
+
+	}
+	h1{
+		font-size:100px;
+		font-family:"halloween";
+	}
+}
+</style>
+
+</head>
+<body>
+
+
+
+<center><h1 id='text'>Don't Click</h1></center>
+
+	<script type="text/javascript">
+		let clickNumber = 0;
+	
+		document.addEventListener("click", function(){
+			clickNumber = clickNumber+1
+			console.log(clickNumber)
+
+if (clickNumber == 1) {
+	text.innerText ="come on."
+}
+if (clickNumber ==2) {
+	text.innerText = "you should stop"
+}
+if (clickNumber ==3) {
+	text.innerText = "or else"}
+if (clickNumber ==4) {
+	text.innerText = "Stop!"}
+if (clickNumber ==5) {
+	text.innerText = "NOW"}
+if (clickNumber ==6) {
+	text.innerText = "that's it"}
+if (clickNumber ==7) {
+	text.innerText = "just know that this is your fault"}
+if (clickNumber ==5) {
+	text.innerText = ""
+	document.body.style.backgroundImage="url(https://img.freepik.com/premium-vector/cute-spooky-pink-halloween-ghost-girl-with-bow-diasy-flower-cartoon-doodle-illustration-bootiful_44161-2112.jpg)"
+}
+
+
+		})
+			
+		
+
+</script>
+
+</body>
+</html>
