@@ -2,12 +2,21 @@
 <html>
 <head>
 	<style type="text/css">
+		#background{
+			width:100%;
+			height:100%;
+			background-image:url(underwater3.png);
+			background-size:cover;
+			position:absolute;
+			z-index:-10;
+		}
 		#pinksquare{
 			width:150px;
 			height: 80px;
 			background-image:url(yfish.png);
 			background-size:contain;
 			background-repeat:no-repeat;
+			margin:50px;
 		}
 
 
@@ -17,6 +26,7 @@
 			background-image:url(pwhale.png);
 			background-size:contain;
 			background-repeat:no-repeat;
+			margin:50px;
 		} 
 
 		#animatedshapes{
@@ -25,6 +35,7 @@
 			background-image:url(bbwhale.png);
 			background-size:contain;
 			background-repeat:no-repeat;
+			margin:50px;
 		}
 
 		#java1{
@@ -33,6 +44,7 @@
 			background-image:url(snail.png);
 			background-size:contain;
 			background-repeat:no-repeat;
+			margin:50px;
 		}
 
 		#jumpscare{
@@ -41,38 +53,55 @@
 			background-image:url(gcrab.png);
 			background-size:contain;
 			background-repeat:no-repeat;
+			margin:50px;
 		}
+
+		div{
+			display: inline-block;
+		}
+
+		a{
+			color:white;
+			text-align: none;
+		}
+
+		#backindex{
+			position:absolute;
+			width:100px;
+			height:50px;
+		}
+
+		body{
+			margin:0px;
+		}
+
 	</style>
 </head>
 <body>
+
+	<div id="background"></div>
 <a href="index.html">
-	<div id="backindex"></div>
-	<div> back</div>
+	<div id="backindex">back</div>
 </a>
 
 <a href="day1.html">
-	<div id="pinksquare"></div>
-	<div> Day 1 Pink Shapes</div>
+	<div id="pinksquare">Day 1 Pink Shapes</div>
 </a>
 
 <a href="day2.html"> 
-	<div id="speaknow"></div>
-	<div> Day 2 Speak Now </div>
+	<div id="speaknow">Day 2 Speak Now </div>
 </a>
 
 <a href="animation.html">
-	<div id="animatedshapes"></div>
-	<div> Animated Shapes </div>
+	<div id="animatedshapes">Animated Shapes </div>
 </a>
 
 <a href="javascript1.html">
-	<div id="java1"></div>
-	<div> Java Script 1 </div>
+	<div id="java1">Java Script 1 </div>
 </a>
 
 <a href="jumpscare1.html">
-	<div id="jumpscare"></div>
-	<div> Jumpscare </div>
+	<div id="jumpscare">Jumpscare </div>
 </a>
 
 
