@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		.turkeys{
+			font-size:40px;
+			display: inline-block;
+			width:200px;
+			height:200px;
+			background-image:url(https://media3.giphy.com/media/XGEfvntJLVE7EsNrzA/200w.gif?cid=6c09b95263vyhy3wsgxrid8flnfbudxv9bifuk9mhju38o2m&ep=v1_gifs_search&rid=200w.gif&ct=g);
+			background-size:contain;
+		}
+
+	</style>
+	
+</head>
+<body>
+	<center>Happy Thanksgiving!!!</center>
+
+<script type="text/javascript">
+	
+let counter = 0;
+
+	function maketurkey() {
+
+		let turkey = document.createElement("div")
+		document.body.appendChild(turkey)
+		turkey.classList.add('turkeys')
+		counter=counter+1
+		turkey.innerText=counter
+	}
+
+	setInterval(maketurkey, 1000)
+
+</script>
+
+</body>
+</html>
