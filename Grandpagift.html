@@ -7,24 +7,47 @@
 		font-size:75px;
 	}
 
+	.photos{
+		width:300px;
+		height:300px;
+		display:inline-block;
+		background-size:contain;
+		background-repeat:no-repeat;
+		background-position:center;
+	}
+
+
 </style>
 </head>
 <body>
 	<center><h1 id='text'>Happy Birthday Grandpa!</h1></center>
 
 <script type="text/javascript">
+
+	let counter=0;
+
+	function makephoto(input){
+		counter=counter+1
+		var photo = document.createElement("div")
+		document.body.appendChild(photo);
+		photo.classList.add("photos");
+		photo.style.backgroundImage="url(./gpa/grandpa"+counter+".png)"
+		if (counter==6) {clearInterval(x)}
+	}
+
+	let x=setInterval(makephoto, 1000)
 	let clickNumber = 0;
 	
-		document.addEventListener("click", function(){
+	 	document.addEventListener("click", function(){
 			clickNumber = clickNumber+1
-			console.log(clickNumber)
+		console.log(clickNumber)
 	if (clickNumber == 1) {
-		text.innerText ="I'm so happy that I can celebrate this with you"
+		text.innerText ="I'm so happy I get to celebrate this with you!"
 	}
 	if (clickNumber ==2) {
-		text.innerText = "I always love to visit you guys"
+		text.innerText = "You're an amazing grandpa!"
 	}
-}
+})
 </script>
 
 </body>
