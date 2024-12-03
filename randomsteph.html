@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#face1{
+			width:300px;
+			height:300px;
+			background-image:url(weirdsteph.jpg);
+			background-size:cover;
+			background-repeat:no-repeat;
+			border-radius:50%;
+			position:absolute;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="faces" id="face1"></div>
+	<div class="faces"id="face2"></div>
+		<div class="faces"id="face3"></div>
+
+	<script type="text/javascript">
+		// console.log(Math.random())
+
+		function move (){
+			let circles= Array.from(document.getElementsByClassName("faces"))
+			console.log(circles)
+
+			circles.forEach(function(element){
+				element.style.left = Math.random()*500+"px";
+				element.style.top = Math.random()*500+"px";
+			})
+
+		}
+
+
+		setInterval(move, 400)
+	</script>
+
+</body>
+</html>
