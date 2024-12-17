@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		
+		#photo1{
+			width:300px;
+			height: 300px;
+			background-image:url(mphoto1.png);
+			display:inline-block;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-position:center;
+		}
+		#photo2{
+			width:300px;
+			height: 300px;
+			background-image:url(mphoto2.png);
+			display:inline-block;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-position:center;
+		}
+		#photo3{
+			width:300px;
+			height: 300px;
+			background-image:url(mphoto3.png);
+			display:inline-block;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-position:center;
+		}
+
+	</style>
+	
+</head>
+<body>
+	<audio id="sound1" src="hbdmom.m4a"></audio>
+	<audio id="sound2" src="moooom.m4a"></audio>
+	<div id="photo1"></div>
+	<div id="photo2"></div>
+	<div id="photo3"></div>
+
+	<script type="text/javascript">
+
+		let lightswitch = true;
+
+		photo1.addEventListener("click", function(){
+			console.log(lightswitch)
+
+			if (lightswitch==true) {
+				sound1.play()
+				sound2.pause()
+				lightswitch = false
+					console.log(lightswitch)
+			}
+
+			else if (lightswitch==false) {
+				sound1.pause()
+				sound2.play()
+				lightswitch=true
+					console.log(lightswitch)
+			}
+		})
+	</script>
+
+</body>
+</html>
