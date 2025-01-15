@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type="text/css">
+		
+		.slots{
+			height:100px;
+			width:100px;
+			border:solid black;
+			background-size:contain;
+		}
+
+		#buttonyeah{
+			height:50px;
+			width:50px;
+			border:solid black;
+
+		}
+
+		/*#slot1{
+			background-image:url(lemon.png);
+		}*/
+
+	</style>
+	
+</head>
+<body>
+
+	<div class="slots" id="slot1"></div>
+	<div class="slots" id="slot2"></div>
+	<div class="slots" id="slot3"></div>
+
+	<div id="buttonyeah"></div>
+
+	<script type="text/javascript">
+		
+		let images = ["url(applesauce.png)", "url(carrot.png)", "url(cchips.png)", "url(lemon.png)", "url(potato.png)", "url(potatochips.png)", "url(rice.png)", "url(swedishfish.png)", "url(tomato.png)"]
+
+		console.log(images.length)
+
+		buttonyeah.addEventListener("click", function(){
+			console.log("hello")
+			let random1 = Math.floor(Math.random()*images.length)
+			let random2 = Math.floor(Math.random()*images.length)
+			let random3 = Math.floor(Math.random()*images.length)
+			console.log(images[random1])
+			console.log(images[random2])
+
+console.log(images[random3])
+
+
+			slot1.style.backgroundImage = images[random1]
+			slot2.style.backgroundImage = images[random2]
+			slot3.style.backgroundImage = images[random3]
+		})
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+		font-size:50px;
+		background-image:url(https://www.mickeyshannon.com/photos/beach-art.jpg);
+		background-size:cover;
+		background-repeat: no-repeat;
+
+		}
+
+		#text{
+			position:relative;
+			top:400px;
+			width:400px;
+			height:400px;
+		}
+	</style>
+	
+</head>
+<body>
+
+	<center>
+		<div id="text"></div>
+	</center>
+
+	<script type="text/javascript">
+		
+		let list = ["go on more walks", "read more books", "get more sleep", "spend less time on my phone", "spend more time with friends and family"]
+
+		document.addEventListener("click", function(){
+			let random = Math.floor(Math.random()*5)
+			let random2 = Math.floor(Math.random()*2)
+
+			text.innerText = list[random]
+		})
+
+	</script>
+
+</body>
+</html>

@@ -11,6 +11,7 @@
 			z-index:-10;
 		}
 		#pinksquare{
+			position: absolute;
 			width:150px;
 			height: 80px;
 			background-image:url(yfish.png);
@@ -18,7 +19,64 @@
 			background-repeat:no-repeat;
 			margin:50px;
 			display: inline-block;
-			animation: rotation 4s infinite linear;
+			animation: rotationSeaSlug 20s infinite linear;
+		}
+		@keyframes rotationSeaSlug{
+			0%{
+				background-image:url(yfish.png);
+				left:70px;
+				top:500px;
+
+
+			}
+			25%{
+				transform: rotate(-10deg);
+				left:300px;
+				top:400px;
+			background-image:url(yfish.png);
+
+			}
+
+			49%{
+			background-image:url(yfish.png);
+			top:500px;
+				left:500px;
+
+			}
+			50%{
+				transform: rotate(0deg);
+				top:500px;
+				left:500px;
+				background-image:url(yfish.png);
+
+
+			}
+			75%{
+				transform: rotate(10deg);
+				top:400px;
+				left:900px;
+			}
+			99%{
+				transform:
+				rotate(0deg);
+				left:70px;
+				top:500px;
+				background-image:url(yfish.png);
+			}
+			100%{
+				background-image:url(yfish.png);
+			}
+		} 
+
+		#animatedshapes{
+			width:150px;
+			height: 80px;
+			background-image:url(bbwhale.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+			margin:50px;
+			display: inline-block;
+			animation: rotation 2.5s infinite linear;
 		}
 		@keyframes rotation{
 			25%{
@@ -38,28 +96,62 @@
 
 
 		#speaknow{
+			position:absolute;
 			width:150px;
 			height:80px;
-			background-image:url(pwhale.png);
+			background-image:url(pwhale2.png);
 			background-size:contain;
 			background-repeat:no-repeat;
 			margin:50px;
 			display: inline-block;
-			animation: rotation 2.2s infinite linear;
+			animation: rotationWhale 10s infinite linear;
+
 		}
-		@keyframes rotation{
+		@keyframes rotationWhale{
+
+			0%{
+				background-image:url(pwhale2.png);
+				left:700px;
+				top:200px;
+
+
+			}
 			25%{
-				transform: rotate(10deg);
+				transform: rotate(-10deg);
+				left:500px;
+				top:200px;
+			background-image:url(pwhale2.png);
+
+			}
+
+			49%{
+			background-image:url(pwhale2.png);
+			top:500px;
+				left:30px;
+
 			}
 			50%{
 				transform: rotate(0deg);
+				top:500px;
+				left:30px;
+				background-image:url(pwhale.png);
+
+
 			}
 			75%{
-				transform: rotate(-10deg);
+				transform: rotate(10deg);
+				top:60px;
+				left:300px;
 			}
-			100%{
+			99%{
 				transform:
 				rotate(0deg);
+				left:700px;
+				top:200px;
+				background-image:url(pwhale.png);
+			}
+			100%{
+				background-image:url(pwhale2.png);
 			}
 		} 
 
@@ -271,6 +363,32 @@
 			}
 		}
 
+		#slotmachine{
+			width:150px;
+			height:80px;
+			background-image:url(rlobster.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+			margin:50px;
+			display: inline-block;
+			animation: rotation 5s infinite linear;
+		}
+		@keyframes rotation{
+			25%{
+				transform: rotate(20deg);
+			}
+			50%{
+				transform: rotate(0deg);
+			}
+			75%{
+				transform: rotate(-20deg);
+			}
+			100%{
+				transform:
+				rotate(0deg);
+			}
+		}
+
 		div{
 			display: inline-block;
 		}
@@ -337,6 +455,14 @@
 
 <a href="ifelse.html">
 	<div id="ifelse">If Else</div>
+</a>
+
+<a href="clickaudio.html">
+	<div id="audiogift">Audio Gift</div>
+</a>
+
+<a href="slotmachine.html">
+	<div id="slotmachine">Slot Machine</div>
 </a>
 
 </body>
