@@ -3,19 +3,32 @@
 <head>
 
 	<style type="text/css">
+
+		@font-face{
+			font-family:"blocky";
+		src:url(blocky.ttf);
+		}
 		
 		.slots{
-			height:100px;
-			width:100px;
+			height:200px;
+			width:200px;
 			border:solid black;
 			background-size:contain;
+			background-repeat: no-repeat;
+			display: inline-block;
 		}
 
 		#buttonyeah{
-			height:50px;
-			width:50px;
+			height:200px;
+			width:200px;
+			background-image: url(pressme.jpg);
 			border:solid black;
-
+			display: inline-block;
+			background-size: contain;
+		}
+		#scoreboard{
+			font-size: 100px;
+			font-family:blocky;
 		}
 
 		/*#slot1{
@@ -33,7 +46,12 @@
 
 	<div id="buttonyeah"></div>
 
+	<div id = "scoreboard"></div>
+
 	<script type="text/javascript">
+
+		let score = 0
+		scoreboard.innerText="Your score is "+score
 		
 		let images = ["url(applesauce.png)", "url(carrot.png)", "url(cchips.png)", "url(lemon.png)", "url(potato.png)", "url(potatochips.png)", "url(rice.png)", "url(swedishfish.png)", "url(tomato.png)"]
 
@@ -44,15 +62,37 @@
 			let random1 = Math.floor(Math.random()*images.length)
 			let random2 = Math.floor(Math.random()*images.length)
 			let random3 = Math.floor(Math.random()*images.length)
-			console.log(images[random1])
-			console.log(images[random2])
-
-console.log(images[random3])
 
 
 			slot1.style.backgroundImage = images[random1]
 			slot2.style.backgroundImage = images[random2]
 			slot3.style.backgroundImage = images[random3]
+
+			if (random1==random2 && random2==random3) {
+				// alert("GREAT JOB!!!")
+				score=score+3
+			scoreboard.innerText="Your score is "+score
+
+			}
+			else if (random1==random2) {
+				// alert("2 out of three, nice job!")
+				score=score+1
+			scoreboard.innerText="Your score is "+score
+
+			}
+			else if (random2==random3) {
+				// alert("2 out of three, nice job!")
+				score=score+1
+			scoreboard.innerText="Your score is "+score
+
+			}
+			else if (random1==random3) {
+				// alert("2 out of three, nice job!")
+				score=score+1
+			scoreboard.innerText="Your score is "+score
+
+			}
+
 		})
 
 	</script>

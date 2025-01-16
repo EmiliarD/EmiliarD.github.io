@@ -18,7 +18,6 @@
 			background-size:contain;
 			background-repeat:no-repeat;
 			margin:50px;
-			display: inline-block;
 			animation: rotationSeaSlug 20s infinite linear;
 		}
 		@keyframes rotationSeaSlug{
@@ -75,22 +74,45 @@
 			background-size:contain;
 			background-repeat:no-repeat;
 			margin:50px;
-			display: inline-block;
-			animation: rotation 2.5s infinite linear;
+			animation: rotationBWhale 2.5s infinite linear;
 		}
-		@keyframes rotation{
+		@keyframes rotationBWhale{
+			0%{
+				left:70px;
+				top:500px;
+
+			}
 			25%{
-				transform: rotate(10deg);
+				transform: rotate(-10deg);
+				left:300px;
+				top:400px;
+
+			}
+
+			49%{
+			top:500px;
+				left:500px;
+
 			}
 			50%{
 				transform: rotate(0deg);
+				top:500px;
+				left:500px;
+
+
 			}
 			75%{
-				transform: rotate(-10deg);
+				transform: rotate(10deg);
+				top:400px;
+				left:900px;
 			}
-			100%{
+			99%{
 				transform:
 				rotate(0deg);
+				left:70px;
+				top:500px;
+			}
+			100%{
 			}
 		}
 
