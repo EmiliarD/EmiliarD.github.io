@@ -425,6 +425,58 @@
 			}
 		}
 
+		#confetti{
+			width:150px;
+			height:80px;
+			background-image:url(bgreenfish.png);
+			background-size:contain;
+			background-repeat:no-repeat;
+			margin:50px;
+			position: absolute;
+			animation: rotationbgfish 5s infinite linear;
+		}
+		@keyframes rotationbgfish{
+			0%{
+				left: 80px;
+				top: 70px;
+				background-image:url(bgreenfish.png)
+			}
+			25%{
+				transform: rotate(20deg);
+				left: 800px;
+				top: 150px;
+				background-image:url(bgreenfish.png)
+			}
+			26%{
+				background-image:url(bgreenfish2.png);
+			}
+			50%{
+				transform: rotate(0deg);
+				left: 400px;
+				top: 200px;
+				background-image:url(bgreenfish2.png);
+			}
+			51%{
+				background-image: url(bgreenfish.png);
+			}
+			75%{
+				transform: rotate(-20deg);
+				left: 600px;
+				top: 250px;
+				background-image: url(bgreenfish.png);
+			}
+			76%{
+				background-image: url(bgreenfish2.png);
+			}
+			100%{
+				transform:
+				rotate(0deg);
+				left: 80px;
+				top: 70px;
+				background-image: url(bgreenfish2.png);
+			}
+		}
+
 		div{
 			display: inline-block;
 		}
@@ -499,6 +551,10 @@
 
 <a href="slotmachine.html">
 	<div id="slotmachine">Slot Machine</div>
+</a>
+
+<a href="confetti.html">
+	<div id="confetti">Confetti</div>
 </a>
 
 </body>

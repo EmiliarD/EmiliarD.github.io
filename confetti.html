@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		.confetti{
+			background-color: cyan;
+			position: absolute;
+			border-radius: 25%;
+			z-index: -5;
+		}
+
+		.text{
+			font-size: 75px;
+			z-index: 5;
+			background-color:rgba(255, 255, 255, 0.5);
+		}
+	</style>
+	
+</head>
+<body>
+
+	<center>
+		<div id="text">
+
+			<h1 class='text'>Happy Valentines Day Steph!</h1>
+
+
+
+	
+	<h2 class='text'>Happy Valentines Day Steph!</h2>
+
+	</div>
+
+</center>
+
+	<script type="text/javascript">
+		
+		function makeConfetti() {
+			let sprinkle = document.createElement("div")
+			document.body.appendChild(sprinkle)
+			sprinkle.classList.add("confetti")
+			sprinkle.style.top="0px"
+			//sprinkle.style.left="0px"
+//if it gets bigger than a thousand
+			function fall(){
+				if (parseInt(sprinkle.style.top)>1000) {
+					sprinkle.style.top="0px"
+				}
+				else{
+					sprinkle.style.top=parseInt(sprinkle.style.top) + Math.random()*100+"px"
+				sprinkle.style.left=Math.random()*1000+"px"
+				}
+				
+			}
+			setInterval(fall, 200)
+			sprinkle.style.height=Math.random()*40+"px"
+			sprinkle.style.width=Math.random()*20+"px"
+
+			let r = Math.random()*130+125
+			let g = Math.random()*75
+			let b = Math.random()*75
+
+			sprinkle.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+		}
+
+		for(let i=0; i<1000; i=i+1){
+			makeConfetti(i)
+		}
+
+
+
+
+
+	</script>
+
+</body>
+</html>
