@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+
+		body{
+			background-color: rgb(255, 190, 190);
+			margin: 0px;
+		}
+
+		.confetti{
+			position: absolute;
+			border-radius: 25%;
+			transition:.1;
+			z-index: -5;
+		}
+
+		#popper{
+			height: 300px;
+			width: 300px;
+			background-image: url(comfettipoper.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+
+		@font-face{
+			font-family: valentines;
+			src:url(valentines.ttf);
+		}
+
+		#happyday{
+			font-size: 150px;
+			font-family: "valentines";
+			color: deeppink;
+		}
+
+		#hearts{
+			background-size: contain;
+			background-image: url(hearts.gif);
+			background-repeat: no-repeat;
+			position: absolute;
+			height: 400px;
+			width: 400px;
+			top: 20px;
+			left: 800px;
+
+		}
+
+		#pile{
+			width:350px;
+			height:350px;
+			top: 20px;
+			left: 450px;
+			background-image:url(heartpile.gif);
+			position: absolute;
+			background-size:contain;
+			background-repeat:no-repeat;
+		
+			
+		}
+	
+	a{
+			color:pink;
+			text-align: none;
+	</style>
+	
+</head>
+<body>
+
+	<div id="popper"></div>	
+	<center><div id="happyday">Happy Valentines Day!</div></center>
+	<div id="hearts"></div>
+
+	<a href="val2.html">
+	<div id="pile"><center>CLICK MEEEE</center></div>
+	</a>
+	
+
+	<script type="text/javascript">
+
+
+		
+		function makeConfetti1() {
+			let sprinkle1 = document.createElement("div")
+			document.body.appendChild(sprinkle1)
+			sprinkle1.classList.add("confetti")
+			sprinkle1.style.top="130px"
+			sprinkle1.style.left="80px"
+//if it gets bigger than a thousand
+			function fall(){
+				if (parseInt(sprinkle1.style.top)>1000) {
+					sprinkle1.style.top="130px"
+					sprinkle1.style.left="80px"
+				}
+				else{
+					sprinkle1.style.top=parseInt(sprinkle1.style.top) + Math.random()*50+"px"
+				}
+				
+			}
+			function ldiag(){
+				if (parseInt(sprinkle1.style.left)>1200) {
+					sprinkle1.style.left="80px"
+					sprinkle1.style.top="130px"
+				}
+				else{
+					sprinkle1.style.left=parseInt(sprinkle1.style.left) + Math.random()*50+"px"
+				}
+				
+			}
+			setInterval(fall, 500)
+			setInterval(ldiag, 500)
+			sprinkle1.style.height=Math.random()*40+"px"
+			sprinkle1.style.width=Math.random()*20+"px"
+
+			let r = Math.random()*70+185
+			let g = Math.random()*75+30
+			let b = Math.random()*75+30
+
+			sprinkle1.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+		}
+
+		for(let i=0; i<1000; i=i+1){
+			makeConfetti1(i)
+
+
+		}
+
+
+
+
+
+
+
+	</script>
+
+</body>
+</html>
