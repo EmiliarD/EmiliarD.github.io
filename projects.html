@@ -105,7 +105,7 @@
 				transform: rotate(0deg);
 				top:200px;
 				left:100px;
-				background-image:url(bbwhale.png);
+				background-image:url(bbwhale2.png);
 
 
 			}
@@ -113,7 +113,7 @@
 				transform: rotate(10deg);
 				top:350px;
 				left:800px
-				background-image:url(bbwhale.png);
+				background-image:url(bbwhale2.png);
 
 			}
 			99%{
@@ -121,7 +121,7 @@
 				rotate(0deg);
 				left:750px;
 				top:100px;
-				background-image:url(bbwhale.png);
+				background-image:url(bbwhale2.png);
 			}
 			100%{
 				background-image:url(bbwhale.png);
@@ -191,6 +191,7 @@
 
 
 		#java1{
+			position:absolute;
 			width:150px;
 			height: 80px;
 			background-image:url(snail.png);
@@ -198,21 +199,55 @@
 			background-repeat:no-repeat;
 			margin:50px;
 			display: inline-block;
-			animation: rotation 10s infinite linear;
+			animation: rotationSnail 100s infinite linear;
 		}
-		@keyframes rotation{
+		@keyframes rotationSnail{
+			0%{
+				background-image:url(snail.png);
+				left:600px;
+				top:570px;}
 			25%{
+				background-image:url(snail.png);
 				transform: rotate(10deg);
+				left:650px;
+				top:560px;
+			}
+			26%{
+				background-image:url(snail2.png);
+				transform: rotate(10deg);
+				left:650px;
+				top:560px;
+			}
+			49%{
+				background-image:url(snail2.png);
+				transform: rotate(0deg);
+				left:520px;
+				top:570px;
 			}
 			50%{
+				background-image:url(snail2.png);
 				transform: rotate(0deg);
+				left:520px;
+				top:570px;
 			}
 			75%{
+				background-image:url(snail2.png);
 				transform: rotate(-10deg);
+				left:450px;
+				top:560px;
 			}
+			76%{background-image:url(snail.png);
+				transform: rotate(-10deg);
+				left:450px;
+				top:560px;}
 			100%{
-				transform:
-				rotate(0deg);
+				background-image:url(snail.png);
+				transform: rotate(-10deg);
+				left:450px;
+				top:560px;
+				transform: rotate(0deg);
+				left:600px;
+				top:570px;
 			}
 		}
 
