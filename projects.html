@@ -252,6 +252,7 @@
 		}
 
 		#jumpscare{
+			position:absolute;
 			width:150px;
 			height:80px;
 			background-image:url(gcrab.png);
@@ -259,22 +260,35 @@
 			background-repeat:no-repeat;
 			margin:50px;
 			display: inline-block;
-			animation: rotation 1s infinite linear;
+			animation: rotationCrab 1s infinite linear;
+
 		}
-		@keyframes rotation{
+		@keyframes rotationCrab{
+			0%{
+				left:450px;
+				top:560px;}
+
 			25%{
 				transform: rotate(3deg);
-			}
+				left:450px;
+				top:560px;}
+			
 			50%{
 				transform: rotate(0deg);
-			}
+				left:450px;
+				top:560px;}
+			
 			75%{
 				transform: rotate(3deg);
-			}
+				left:450px;
+				top:560px;}
+			
 			100%{
 				transform:
 				rotate(0deg);
-			}
+				left:450px;
+				top:560px;}
+			
 		}
 
 		#turkey{
