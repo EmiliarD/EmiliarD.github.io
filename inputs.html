@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+
+	.squares{
+		width: 100px;
+		height: 100px;
+		background-color: blueviolet;
+		margin: 1px;
+		display: inline-block;
+		color: white;
+	}
+
+	#red{
+		background-color: darkred;
+	}
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+	
+
+		function makeSquare(something){
+	
+			let thing = document.createElement("div")
+			document.body.appendChild(thing)
+			thing.classList.add("squares")
+			thing.innerText=something
+		}
+
+		for(let i=1; i<11; i=i+1){
+			makeSquare()
+		}
+
+	</script>
+		}
+
+</body>
+</html>
