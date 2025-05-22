@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pizza Maker</title>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 20px;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background-color: rgb(255, 248, 225); /* Warm cream background */
+    }
+    
+    /* Pizzeria background elements */
+    .pizzeria-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+    }
+    
+    /* Simple checkered tablecloth pattern */
+    .tablecloth {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background-image: linear-gradient(45deg, rgb(244, 67, 54) 25%, transparent 25%),
+                          linear-gradient(-45deg, rgb(244, 67, 54) 25%, transparent 25%),
+                          linear-gradient(45deg, transparent 75%, rgb(244, 67, 54) 75%),
+                          linear-gradient(-45deg, transparent 75%, rgb(244, 67, 54) 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        background-color: white;
+        opacity: 0.5;
+    }
+    
+    /* Brick wall background */
+    .brick-wall {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background-image: linear-gradient(90deg, rgb(213, 115, 88) 98%, rgb(170, 88, 57) 98%);
+        background-size: 40px 20px;
+        opacity: 0.7;
+    }
+    
+    .title {
+        text-align: center;
+        font-size: 32px;
+        color: rgb(211, 47, 47);
+        text-shadow: 2px 2px 0px rgb(255, 235, 59);
+        margin-bottom: 20px;
+    }
+    
+    /* Original pizza code */
+    #pizza {
+        width: 700px;
+        height: 700px;
+        background-image: url("pizzaDough.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        top: 10px;
+        left: 10px;
+        margin: 0 auto; /* Center the pizza */
+    }
+    #pine {
+        background-image: url(pineaple.png);
+        background-size: cover;
+    }
+    #basil {
+        background-image: url(basil.png);
+    }
+    #shroom {
+        background-image: url(mushroom.png)
+    }
+    #olive {
+        background-image: url(PEPPY.png)
+    }
+    #pineapple {
+        background-image: url(blackOs.png)
+    }
+    #onion {
+        background-image: url(ONION.png);
+    }
+    #bacon {
+        background-image: url(MOMO.png);
+    }
+    .topping {
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        margin: 5px;
+        border: 2px solid transparent;
+        transition: transform 0.2s;
+    }
+    .topping:hover {
+        transform: scale(1.1);
+        border: 2px dashed rgb(255, 152, 0);
+    }
+    #tomato{
+        background-image: url(tomatosauce.png);
+    }
+    #pesto{
+        background-image: url(pesto.png);
+    }
+    .sauce {
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+        cursor: pointer;
+        margin: 5px;
+        border: 2px solid transparent;
+        transition: transform 0.2s;
+    }
+    .sauce:hover {
+        transform: scale(1.1);
+        border: 2px dashed rgb(255, 152, 0);
+    }
+    
+    /* Ingredient tray */
+    .ingredient-tray {
+        background-color: rgb(141, 110, 99);
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    </style>
+</head>
+<body>
+    <!-- Pizzeria background -->
+    <div class="pizzeria-bg">
+        <div class="brick-wall"></div>
+        <div class="tablecloth"></div>
+    </div>
+    
+    <h1 class="title">Mama Mia's Pizza Maker!</h1>
+    
+    <!-- Ingredients tray -->
+    <div class="ingredient-tray">
+        <div class="sauce" id="tomato"></div>
+        <div class="sauce" id="pesto"></div>
+        <div class="sauce" id="white"></div>
+        <div class="topping" id="pine"></div>
+        <div class="topping" id="basil"></div>
+        <div class="topping" id="shroom"></div>
+        <div class="topping" id="olive"></div>
+        <div class="topping" id="pineapple"></div>
+        <div class="topping" id="onion"></div>
+        <div class="topping" id="bacon"></div>
+    </div>
+    
+    <div id="pizza"></div>
+    
+    <script type="text/javascript">
+    var image;
+    function makeSauce(){
+        var sauce = document.createElement("tSauce");
+        sauce.style.width = "100px";
+        sauce.style.height = "100px";
+        sauce.style.borderRadius = "50%";
+        sauce.style.position = "absolute";
+        sauce.style.backgroundSize = "cover";
+        sauce.style.backgroundImage = "url(" + image + ")";
+        
+        pizza.addEventListener("mousemove", function(event) {
+            console.log(event)
+        });
+        pizza.appendChild(sauce);
+        sauce.style.left =   event.clientX - 50 + "px";
+        sauce.style.top = event.clientY - 150 + "px";
+    };
+    tomato.addEventListener("click", function(click) {
+        image = "redsauce.png"
+  
+    });
+    pesto.addEventListener("click", function(click){
+        image = "pesto.png"
+    
+    })
+    pine.addEventListener("click", function() {
+        image = "pineapleSlice.png"
+    });
+    basil.addEventListener("click", function() {
+        image = "B3.png"
+    });
+    shroom.addEventListener("click", function() {
+        image = "mushroom.png"
+    });
+    olive.addEventListener("click", function() {
+        image = "PEPPY.png"
+    });
+    pineapple.addEventListener("click", function() {
+        image = "OLIVEs.png"
+    });
+    onion.addEventListener("click", function() {
+        image = "onionRing.png"
+    });
+    bacon.addEventListener("click", function() {
+        image = "MOZZY.png"
+    });
+    pizza.addEventListener("click", makeSauce);
+    </script>
+</body>
+</html>

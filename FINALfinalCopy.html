@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Maker</title>
+    <style type="text/css">
+    body {
+    margin: 0;
+    padding: 20px;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    #title {
+        text-align: center;
+        font-size: 32px;
+        color: rgb(211, 47, 47);
+        text-shadow: 2px 2px 0px rgb(255, 235, 59);
+        margin-bottom: 20px;
+    }
+
+    #pizza {
+        width: 700px;
+        height: 700px;
+        background-image: url("pizzaDough.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        top:50%;
+        left: 30%;
+    }
+
+    #pine {
+        background-image: url(pineaple.png);
+        background-size: cover;
+    }
+
+    #basil {
+        background-image: url(basil.png);
+    }
+
+    #shroom {
+        background-image: url(mushroom.png)
+    }
+
+    #olive {
+        background-image: url(PEPPY.png)
+    }
+
+    #pineapple {
+        background-image: url(blackOs.png)
+    }
+
+    #onion {
+        background-image: url(ONION.png);
+    }
+
+    #bacon {
+        background-image: url(MOMO.png);
+    }
+
+    .topping {
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+    }
+
+    #tomato{
+        background-image: url(tomatosauce.png);
+    }
+    #pesto{
+        background-image: url(pesto.png);
+    }
+    .sauce {
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+        background-position: center;
+    }
+    .sauce:hover {
+        transform: scale(1.1);
+        border: 2px dashed rgb(255, 152, 0);;
+        border-color: indianred;
+    }
+    .topping:hover {
+        transform: scale(1.1);
+        border: 2px dashed rgb(255, 152, 0);;
+        border-color: indianred;
+    }
+    .ingredient-tray {
+        background-color: white;
+        border-radius: 10px;
+        padding: 15px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    #cookButton{
+        top: 500px;
+        left: 1000px;
+        position: absolute;
+        background-color: olive;
+        height: 100px;
+        width: 100px;
+        z-index: 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Comic Sans MS', cursive;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    #tablecloth {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(45deg, rgb(244, 67, 54) 25%, transparent 25%),
+                linear-gradient(-45deg, rgb(244, 67, 54) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgb(244, 67, 54) 75%),
+                linear-gradient(-45deg, transparent 75%, rgb(244, 67, 54) 75%);
+        background-size: 20px 20px;
+        background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+        background-color: white;
+        z-index: -3;
+    }
+    
+
+    </style>
+</head>
+
+<body>
+    <h1 id="title">Mama Mia's Pizza Maker!</h1>
+    <div id ="tablecloth"></div>
+    <div id="cookButton">COOK!</div>
+    <div class="ingredient-tray">
+        <div class="sauce" id="tomato"></div>
+        <div class="sauce" id="pesto"></div>
+        <div class="sauce" id="white"></div>
+        <div class="topping" id="pine"></div>
+        <div class="topping" id="basil"></div>
+        <div class="topping" id="shroom"></div>
+        <div class="topping" id="olive"></div>
+        <div class="topping" id="pineapple"></div>
+        <div class="topping" id="onion"></div>
+        <div class="topping" id="bacon"></div>
+    </div>
+    <div id="pizza"></div>
+    <script type="text/javascript">
+    var image;
+
+    function makeSauce(){
+        var sauce = document.createElement("tSauce");
+        sauce.style.width = "100px";
+        sauce.style.height = "100px";
+        sauce.style.borderRadius = "50%";
+        sauce.style.position = "absolute";
+        sauce.style.backgroundSize = "cover";
+        sauce.style.backgroundImage = "url(" + image + ")";
+        sauce.className = "pizza-topping";
+
+        pizza.addEventListener("mousemove", function(event) {
+            console.log(event)
+        });
+
+        pizza.appendChild(sauce);
+
+        sauce.style.left = event.clientX - 500 + "px";
+        sauce.style.top = event.clientY - 200 + "px";
+    };
+    
+    tomato.addEventListener("click", function(click) {
+        image = "redsauce.png"
+    });
+    
+    pesto.addEventListener("click", function(click){
+        image = "pesto.png"
+    });
+
+    pine.addEventListener("click", function() {
+        image = "pineapleSlice.png"
+    });
+
+    basil.addEventListener("click", function() {
+        image = "B3.png"
+    });
+
+    shroom.addEventListener("click", function() {
+        image = "mushroom.png"
+    });
+
+    olive.addEventListener("click", function() {
+        image = "PEPPY.png"
+    });
+
+    pineapple.addEventListener("click", function() {
+        image = "OLIVEs.png"
+    });
+    
+    onion.addEventListener("click", function() {
+        image = "onionRing.png"
+    });
+    
+    bacon.addEventListener("click", function() {
+        image = "MOZZY.png"
+    });
+
+    pizza.addEventListener("click", makeSauce);
+    
+    // Cook button functionality
+    document.getElementById("cookButton").addEventListener("click", function() {
+        // Get all toppings on the pizza
+        const toppings = document.querySelectorAll(".pizza-topping");
+        
+        // Make all toppings darker and slightly more red
+        toppings.forEach(function(topping) {
+            topping.style.filter = "brightness(0.8) hue-rotate(348deg)";
+            pizza.style.filter = "brightness(0.9) hue-rotate(0deg)";
+        });
+        this.textContent = "DELICIOUS!";
+    });
+    </script>
+</body>
+
+</html>
